@@ -5,8 +5,8 @@ var header = document.getElementById('bigHeader');
 var quizDiv = document.getElementById('quizQuestions');
 var page = document.getElementById('page');
 var form = document.getElementById('form');
-var highScoresArray = []
-var highScoresNames = []
+var highScoresArray = ['Alex Bradshaw']
+var highScoresNames = ['75']
 var ul = document.getElementById('highScoresContainer');
 var search = document.querySelector('ul')
 var quizButton1 = document.getElementById('button1');
@@ -18,6 +18,13 @@ var x = 75
 
 var storedNames = JSON.parse(localStorage.getItem("highScoresName"));
 var storedScore = JSON.parse(localStorage.getItem("highScoresScore"));
+
+if(storedNames == null) {
+localStorage.setItem("highScoresName", JSON.stringify(['Alex Bradshaw']));
+localStorage.setItem("highScoresScore", JSON.stringify(['75']));
+storedNames = JSON.parse(localStorage.getItem("highScoresName"));
+storedScore = JSON.parse(localStorage.getItem("highScoresScore"));
+}
 
 if (search.id == "highScoresContainer") {
     console.log(storedNames)
