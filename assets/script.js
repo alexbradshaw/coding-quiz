@@ -81,14 +81,18 @@ startQuizButton.addEventListener('click', function () {
 startQuizButton.addEventListener('click', function () {
 
     if (startQuizButton.id == 'saveInitials') {
-        storedNames.push(form.value);
-        storedScore.push(x);
-        localStorage.setItem("highScoresName", JSON.stringify(storedNames));
-        localStorage.setItem("highScoresScore", JSON.stringify(storedScore));
-        form.value = '';
-        highScoresArray = storedNames
-        highScoresNames = storedScore
-        location.reload();
+        if(form.value !== null && form.value !== '' && form.value !== 'Please enter initials or your name.'){
+            storedNames.push(form.value);
+            storedScore.push(x);
+            localStorage.setItem("highScoresName", JSON.stringify(storedNames));
+            localStorage.setItem("highScoresScore", JSON.stringify(storedScore));
+            form.value = '';
+            highScoresArray = storedNames
+            highScoresNames = storedScore
+            location.reload();
+        } else{
+            form.value = 'Please enter initials or your name.';
+        }
     };
 
 });
