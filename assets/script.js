@@ -81,7 +81,7 @@ startQuizButton.addEventListener('click', function () {
 startQuizButton.addEventListener('click', function () {
 
     if (startQuizButton.id == 'saveInitials') {
-        if(form.value !== null && form.value !== ' ' && form.value !== 'Please enter initials or your name.'){
+        if(form.value !==  '' && form.value !== ' ' && form.value !== 'Please enter initials or your name.'){
             storedNames.push(form.value);
             storedScore.push(x);
             localStorage.setItem("highScoresName", JSON.stringify(storedNames));
