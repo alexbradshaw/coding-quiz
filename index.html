@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div>
+        <a class="highScores" href="assets/highscores.html">View High Scores</a>
+        <header class="time" id="timer">Time: 0</header>
+    </div>
+
+    <div id='page'>
+        <h1 class="title" id="bigHeader">Coding Quiz Challenge</h1>
+        <div class='quizQuestions' id='quizQuestions'></div>
+        <p class="codingPara" id="description">Try to answer these coding questions before the time runs out! But
+            beware, wrong answers deduct ten seconds from your time! Good luck!</p>
+
+        <div class='formDiv'>
+            <textarea name="score record" class='textForm' id="form" cols="50" rows="1"></textarea>
+        </div>
+
+        <div class="startButton"><button class="rounded-pill" id="startQuiz">Start Quiz</button></div>
+    
+        <div class="row formDiv2 mt-5" id=quizDiv>
+            <p class="col-5 quizAnswers">A.</p>
+            <div class="col-7"><button class="rounded-pill custom-button1" id=button1>Placeholder</button></div>
+            <p class="col-5 quizAnswers">B.</p>
+            <div class="col-7"><button class="rounded-pill custom-button1" id=button2>Placeholder</button></div>
+            <p class="col-5 quizAnswers">C.</p>
+            <div class="col-7"><button class="rounded-pill custom-button1" id=button3>Placeholder</button></div>
+            <p class="col-5 quizAnswers">D.</p>
+            <div class="col-7"><button class="rounded-pill custom-button1" id=button4>Placeholder</button></div>
+        </div>
+
+    </div>
+    <ul></ul>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
