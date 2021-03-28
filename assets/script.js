@@ -5,8 +5,8 @@ var header = document.getElementById('bigHeader');
 var quizDiv = document.getElementById('quizQuestions');
 var page = document.getElementById('page');
 var form = document.getElementById('form');
-var highScoreArray = [];
-var highScoreNumber = [];
+var highScoresArray = []
+var highScoresNames = []
 var ul = document.getElementById('highScoresContainer');
 var search = document.querySelector('ul')
 var quizButton1 = document.getElementById('button1');
@@ -20,7 +20,8 @@ var storedNames = JSON.parse(localStorage.getItem("highScoresName"));
 var storedScore = JSON.parse(localStorage.getItem("highScoresScore"));
 
 if (search.id == "highScoresContainer") {
-    
+    console.log(storedNames)
+    console.log(storedScore)
     var i;
     for (i = 0; i < storedNames.length; i++) {
 
@@ -75,9 +76,11 @@ startQuizButton.addEventListener('click', function () {
     if (startQuizButton.id == 'saveInitials') {
         storedNames.push(form.value);
         storedScore.push(x);
-        window.localStorage.setItem("highScoresName", JSON.stringify(storedNames));
-        window.localStorage.setItem("highScoresScore", JSON.stringify(storedScore));
+        localStorage.setItem("highScoresName", JSON.stringify(storedNames));
+        localStorage.setItem("highScoresScore", JSON.stringify(storedScore));
         form.value = '';
+        highScoresArray = storedNames
+        highScoresNames = storedScore
         location.reload();
     };
 
