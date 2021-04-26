@@ -37,3 +37,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - https://alexbradshaw.github.io/coding-quiz/
 
 - https://github.com/alexbradshaw/coding-quiz
+
+
+## Contact Info
+
+- Email: alexanderbradshaw5@gmail.com
